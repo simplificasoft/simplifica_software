@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplifica Software - Desenvolvimento de Software Personalizado | TypeScript & Node.js</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Desenvolvimento de software personalizado com TypeScript, Node.js e Tailwind. Sistemas web, apps mobile e consultoria técnica para empresas que querem crescer.">
+    <meta name="keywords" content="desenvolvimento software, typescript, nodejs, tailwind, sistema personalizado, app web, consultoria técnica, transformação digital">
+    <meta name="author" content="Simplifica Software">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Simplifica Software - Desenvolvimento de Software Personalizado">
+    <meta property="og:description" content="Transformamos processos complexos em soluções digitais intuitivas. Software personalizado, apps e consultoria técnica com TypeScript e Node.js.">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Simplifica Software - Desenvolvimento de Software Personalizado">
+    <meta property="twitter:description" content="Transformamos processos complexos em soluções digitais intuitivas. Software personalizado, apps e consultoria técnica.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Google Analytics 4 - SUBSTITUA GA_MEASUREMENT_ID pelo seu ID real -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        
+        // Custom events for conversion tracking
+        function trackFormSubmit() {
+            gtag('event', 'form_submit', {
+                'event_category': 'engagement',
+                'event_label': 'contact_form'
+            });
+        }
+        
+        function trackCTAClick(cta_name) {
+            gtag('event', 'cta_click', {
+                'event_category': 'engagement',
+                'event_label': cta_name
+            });
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Header ===== -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#">
+                <img src="./img/Logo Simplifica Software (1).png" alt="Logo Simplifica Software" class="h-12">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#servicos" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Serviços</a>
+                <a href="#tecnologias" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Tecnologias</a>
+                <a href="#cases" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Cases</a>
+                <a href="#sobre" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Sobre</a>
+                <a href="#contato" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Contato</a>
+            </nav>
+            
+            <!-- CTA Button -->
+            <a href="#contato" onclick="trackCTAClick('header_cta')" class="hidden md:inline-block bg-[#2cc6c5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-md hover:shadow-lg">
+                💬 Orçamento Gratuito
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#servicos" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Serviços</a>
+            <a href="#tecnologias" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Tecnologias</a>
+            <a href="#cases" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Cases</a>
+            <a href="#sobre" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Sobre</a>
+            <a href="#contato" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Contato</a>
+            <div class="p-4">
+                 <a href="#contato" class="w-full block text-center bg-[#2cc6c5] text-white font-semibold px-5 py-3 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-md">
+                    💬 Orçamento Gratuito
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <!-- Social Proof Badge -->
+                <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    Especialistas em TypeScript + Node.js + Tailwind
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold text-[#191970] leading-tight mb-6">
+                    Software personalizado que <span class="text-[#2cc6c5]">acelera seu negócio</span> em semanas, não meses
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-8">
+                    <strong>TypeScript + Node.js + Tailwind:</strong> A stack moderna para criar sistemas web, apps mobile e automações que geram resultados reais.
+                </p>
+                
+                <!-- Value Proposition -->
+                <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl mx-auto mb-8">
+                    <p class="text-amber-800 font-medium">
+                        ⚡ <strong>Entrega em 30-60 dias</strong> | 💰 <strong>ROI garantido</strong> | 🛡️ <strong>Suporte incluso</strong>
+                    </p>
+                </div>
+                
+                <div class="flex justify-center items-center gap-4 flex-wrap mb-8">
+                    <a href="#contato" onclick="trackCTAClick('hero_primary')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative">
+                        🚀 Solicitar Orçamento Gratuito
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                            GRÁTIS
+                        </span>
+                    </a>
+                    <a href="#cases" onclick="trackCTAClick('hero_secondary')" class="bg-gray-200 text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-300 transition-all duration-300">
+                        Ver Projetos Reais
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="flex justify-center items-center gap-8 flex-wrap text-sm text-gray-500">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Sem compromisso
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Resposta em 24h
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Código limpo e documentado
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#191970]">Soluções que Geram Impacto Real</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Mais do que código, entregamos crescimento, eficiência e inovação para sua empresa.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="bg-[#2cc6c5]/20 text-[#2cc6c5] rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#191970] mb-3">Sistemas Web Personalizados</h3>
+                        <p class="text-gray-600">ERPs, CRMs, dashboards e automações com TypeScript + Node.js. Integração completa com seus processos existentes.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="bg-[#2cc6c5]/20 text-[#2cc6c5] rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#191970] mb-3">Apps Mobile & PWAs</h3>
+                        <p class="text-gray-600">Aplicativos híbridos que funcionam em iOS e Android. Performance nativa com tecnologias web modernas.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="bg-[#2cc6c5]/20 text-[#2cc6c5] rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20V16"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#191970] mb-3">Consultoria & Modernização</h3>
+                        <p class="text-gray-600">Migração de sistemas legados, otimização de performance e implementação de boas práticas de desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="tecnologias" class="py-20 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#191970]">Stack Moderna e Comprovada</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Utilizamos as tecnologias que grandes empresas como Netflix, Airbnb e Uber confiam para construir soluções escaláveis.</p>
+                </div>
+                <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-x-8 gap-y-6 text-5xl text-gray-500">
+                    <div class="text-center">
+                        <i class="devicon-typescript-plain colored" title="TypeScript"></i>
+                        <p class="text-sm mt-2 text-gray-600">TypeScript</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="devicon-nodejs-plain-wordmark colored" title="Node.js"></i>
+                        <p class="text-sm mt-2 text-gray-600">Node.js</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="devicon-react-original colored" title="React"></i>
+                        <p class="text-sm mt-2 text-gray-600">React</p>
+                    </div>
+                    <div class="text-center">
+                        <svg class="w-12 h-12 mx-auto text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C7.666,17.818,9.027,19.2,12.001,19.2c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                        </svg>
+                        <p class="text-sm mt-2 text-gray-600">Tailwind CSS</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+                        <p class="text-sm mt-2 text-gray-600">PostgreSQL</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="devicon-docker-plain colored" title="Docker"></i>
+                        <p class="text-sm mt-2 text-gray-600">Docker</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="devicon-amazonwebservices-original colored" title="AWS"></i>
+                        <p class="text-sm mt-2 text-gray-600">AWS</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="devicon-git-plain colored" title="Git"></i>
+                        <p class="text-sm mt-2 text-gray-600">Git</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cases de Sucesso Section -->
+        <section id="cases" class="py-20 fade-in-section bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#191970] mb-4">Projetos que Transformaram Negócios</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Casos reais de empresas que automatizaram processos e aceleraram crescimento</p>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Project 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="bg-[#2cc6c5] text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                            Sistema ERP
+                        </div>
+                        <h3 class="text-xl font-bold text-[#191970] mb-3">Automação Comercial</h3>
+                        <p class="text-gray-600 mb-4">Sistema completo de gestão que reduziu tempo de processamento de pedidos em 80% para empresa de distribuição.</p>
+                        <div class="text-sm text-gray-500">
+                            <strong>Stack:</strong> TypeScript, Node.js, PostgreSQL
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="bg-[#2cc6c5] text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                            App Mobile
+                        </div>
+                        <h3 class="text-xl font-bold text-[#191970] mb-3">Marketplace B2B</h3>
+                        <p class="text-gray-600 mb-4">Aplicativo que conecta fornecedores e compradores, processando R$ 2M+ em transações mensais.</p>
+                        <div class="text-sm text-gray-500">
+                            <strong>Stack:</strong> React Native, Node.js, AWS
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="bg-[#2cc6c5] text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                            Dashboard Analytics
+                        </div>
+                        <h3 class="text-xl font-bold text-[#191970] mb-3">BI em Tempo Real</h3>
+                        <p class="text-gray-600 mb-4">Dashboard que centraliza dados de múltiplas fontes, permitindo decisões baseadas em dados atualizados.</p>
+                        <div class="text-sm text-gray-500">
+                            <strong>Stack:</strong> React, TypeScript, Tailwind
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats Row -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">3+ anos</div>
+                        <div class="text-gray-600">Experiência com TypeScript</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">20+</div>
+                        <div class="text-gray-600">Projetos entregues</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">100%</div>
+                        <div class="text-gray-600">Projetos no prazo</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">6 meses</div>
+                        <div class="text-gray-600">Suporte incluído</div>
+                    </div>
+                </div>
+                
+                <!-- CTA dentro da seção -->
+                <div class="text-center">
+                    <a href="#contato" onclick="trackCTAClick('cases_cta')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Quero um Projeto Como Estes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="sobre" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div class="bg-gradient-to-br from-[#2cc6c5] to-[#191970] rounded-xl p-8 text-white">
+                            <h3 class="text-2xl font-bold mb-4">Por que TypeScript + Node.js?</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Menos bugs com tipagem estática
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Desenvolvimento mais rápido
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Código mais fácil de manter
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Escalabilidade garantida
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#191970] mb-6">Especialistas em Tecnologias Modernas</h2>
+                        <p class="text-gray-600 mb-4 text-lg">Na Simplifica Software, acreditamos que tecnologia deve facilitar, não complicar. Por isso, escolhemos TypeScript como nossa linguagem principal.</p>
+                        <p class="text-gray-600 mb-6 text-lg">Com anos de experiência em Node.js e Tailwind CSS, entregamos soluções robustas, rápidas e bonitas que seus usuários vão amar usar.</p>
+                        <div class="flex gap-4">
+                            <a href="#contato" class="bg-[#2cc6c5] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#27b3b2] transition-all duration-300">
+                                Vamos Conversar
+                            </a>
+                            <a href="#cases" class="border-2 border-[#2cc6c5] text-[#2cc6c5] font-bold px-6 py-3 rounded-lg hover:bg-[#2cc6c5] hover:text-white transition-all duration-300">
+                                Ver Portfólio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-20 bg-[#191970] text-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold">Vamos construir algo incrível juntos?</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Conte-nos sobre seu projeto e receba um orçamento personalizado em até 24 horas.</p>
+                </div>
+                <div class="max-w-xl mx-auto mt-12 bg-white text-gray-800 rounded-xl shadow-2xl p-8">
+                    <!-- IMPORTANTE: Substitua YOUR_FORM_ID pelo ID real do Formspree -->
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="trackFormSubmit()">
+                        <div class="mb-5">
+                            <label for="name" class="block mb-2 font-medium">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="email" class="block mb-2 font-medium">E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="company" class="block mb-2 font-medium">Empresa (opcional)</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]">
+                        </div>
+                        <div class="mb-8">
+                            <label for="message" class="block mb-2 font-medium">Descreva seu projeto</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" placeholder="Ex: Preciso de um sistema para gerenciar vendas, com dashboard e app mobile..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#2cc6c5] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            💬 Enviar Projeto e Receber Orçamento
+                        </button>
+                        <p class="text-xs text-gray-500 mt-4 text-center">
+                            🔒 Seus dados estão seguros. Resposta garantida em 24h.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                     <a href="#">
+                        <img src="./img/Logo Simplifica Software (1).png" alt="Logo Simplifica Software" class="h-12">
+                    </a>
+                    <p class="text-gray-400 mt-2">TypeScript • Node.js • Tailwind</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/company/simplifica-software" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/simplifica-software" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                     <a href="mailto:contato@simplificasoftware.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Simplifica Software. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a, #header a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Fade-in sections on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
