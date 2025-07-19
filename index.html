@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://simplificasoftware.vercel.app">
     <meta property="og:title" content="Simplifica Software - Desenvolvimento de Software Personalizado">
     <meta property="og:description" content="Transformamos processos complexos em soluções digitais intuitivas. Software personalizado, apps e consultoria técnica com TypeScript e Node.js.">
-    <meta property="og:image" content="https://simplificasoftware.vercel.app/img/Logo Simplifica Software (1).png">
+    <meta property="og:image" content="https://simplificasoftware.vercel.app/img/2.png">
     <meta property="og:locale" content="pt_BR">
     
     <!-- Twitter -->
@@ -25,7 +25,7 @@
     <meta property="twitter:url" content="https://simplificasoftware.vercel.app">
     <meta property="twitter:title" content="Simplifica Software - Desenvolvimento de Software Personalizado">
     <meta property="twitter:description" content="Transformamos processos complexos em soluções digitais intuitivas. Software personalizado, apps e consultoria técnica.">
-    <meta property="twitter:image" content="https://simplificasoftware.vercel.app/img/Logo Simplifica Software (1).png">
+    <meta property="twitter:image" content="https://simplificasoftware.vercel.app/img/2.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,12 +61,7 @@
             });
         }
         
-        function trackLeadMagnet() {
-            gtag('event', 'lead_magnet_submit', {
-                'event_category': 'engagement',
-                'event_label': 'lead_magnet'
-            });
-        }
+
         
         function trackWhatsApp() {
             gtag('event', 'whatsapp_click', {
@@ -125,7 +120,7 @@
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <a href="#">
-                <img src="./img/Logo Simplifica Software (1).png" alt="Logo Simplifica Software" class="h-12">
+                <img src="./img/2.png" alt="Logo Simplifica Software" class="h-12">
             </a>
             
             <!-- Desktop Navigation -->
@@ -137,7 +132,7 @@
                 <a href="#contato" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Contato</a>
             </nav>
             
-            <!-- CTA Button -->
+                        <!-- CTA Button -->
             <a href="https://wa.me/5586999502444?text=Olá! Gostaria de solicitar um orçamento para desenvolvimento de software." target="_blank" onclick="trackCTAClick('header_whatsapp')" class="hidden md:inline-block bg-[#25D366] text-white font-semibold px-5 py-2 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-md hover:shadow-lg">
                 💬 WhatsApp
             </a>
@@ -158,8 +153,8 @@
             <a href="#sobre" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Sobre</a>
             <a href="#contato" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Contato</a>
             <div class="p-4">
-                <a href="https://wa.me/5586999502444?text=Olá! Gostaria de solicitar um orçamento." target="_blank" class="w-full block text-center bg-[#25D366] text-white font-semibold px-5 py-3 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-md">
-                    💬 WhatsApp
+                <a href="#contato" class="w-full block text-center bg-[#2cc6c5] text-white font-semibold px-5 py-3 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-md">
+                    📞 Contato
                 </a>
             </div>
         </div>
@@ -186,19 +181,16 @@
                 
                 <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl mx-auto mb-8">
                     <p class="text-amber-800 font-medium">
-                        ⚡ <strong>Entrega em 30-60 dias</strong> | 💰 <strong>ROI garantido</strong> | 🛡️ <strong>Suporte incluso</strong>
+                        ⚡ <strong>Desenvolvimento rápido</strong> | 💰 <strong>Preços justos</strong> | 🛡️ <strong>Suporte incluso</strong>
                     </p>
                 </div>
                 
                 <div class="flex justify-center items-center gap-4 flex-wrap mb-8">
-                    <a href="https://wa.me/5586999502444?text=Olá! Gostaria de solicitar um orçamento para desenvolvimento de software personalizado." target="_blank" onclick="trackCTAClick('hero_whatsapp')" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative">
+                    <a href="https://wa.me/5586999502444?text=Olá! Gostaria de solicitar um orçamento para desenvolvimento de software personalizado." target="_blank" onclick="trackCTAClick('hero_whatsapp')" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         💬 Chamar no WhatsApp
-                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                            GRÁTIS
-                        </span>
                     </a>
-                    <a href="#lead-magnet" onclick="trackCTAClick('hero_secondary')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300">
-                        📥 Baixar Guia Gratuito
+                    <a href="#contato" onclick="trackCTAClick('hero_secondary')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300">
+                        📧 Enviar Mensagem
                     </a>
                 </div>
                 
@@ -357,94 +349,28 @@
                 <!-- Stats Row -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">3+ anos</div>
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">2+ anos</div>
                         <div class="text-gray-600">Experiência com TypeScript</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">20+</div>
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">15+</div>
                         <div class="text-gray-600">Projetos entregues</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">100%</div>
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">95%</div>
                         <div class="text-gray-600">Projetos no prazo</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">6 meses</div>
+                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">3 meses</div>
                         <div class="text-gray-600">Suporte incluído</div>
                     </div>
                 </div>
                 
                 <!-- CTA dentro da seção -->
                 <div class="text-center">
-                    <a href="https://wa.me/5586999502444?text=Olá! Vi os cases de sucesso e gostaria de um projeto similar." target="_blank" onclick="trackCTAClick('cases_whatsapp')" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        💬 Quero um Projeto Como Estes
+                    <a href="#contato" onclick="trackCTAClick('cases_contact')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        💼 Solicitar Orçamento
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lead Magnet Section -->
-        <section id="lead-magnet" class="py-20 bg-gradient-to-r from-[#2cc6c5] to-[#1fa19a] text-white fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                        🎯 Guia GRATUITO: "TypeScript para Empresas - Do Básico ao Avançado"
-                    </h2>
-                    <p class="text-xl mb-8 text-white/90">
-                        Baixe nosso guia exclusivo com tudo que você precisa saber sobre TypeScript em projetos empresariais
-                    </p>
-                    
-                    <div class="bg-white text-gray-800 rounded-xl p-8 max-w-md mx-auto shadow-2xl">
-                        <div class="text-left mb-6">
-                            <h3 class="font-bold text-lg mb-4">Você vai descobrir:</h3>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Por que TypeScript é essencial em 2025
-                                </li>
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Como migrar projetos JavaScript existentes
-                                </li>
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Best practices para times de desenvolvimento
-                                </li>
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Checklist de implementação passo a passo
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <form action="https://formspree.io/f/xgvzowpd" method="POST" onsubmit="trackLeadMagnet()" class="space-y-4">
-                            <div>
-                                <input type="text" name="name" placeholder="Seu nome" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]">
-                            </div>
-                            <div>
-                                <input type="email" name="email" placeholder="Seu melhor e-mail" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]">
-                            </div>
-                            <div>
-                                <input type="text" name="company" placeholder="Empresa (opcional)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]">
-                            </div>
-                            <input type="hidden" name="_subject" value="Novo lead - Guia TypeScript">
-                            <button type="submit" class="w-full bg-[#191970] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#151852] transition-all duration-300 shadow-lg">
-                                📥 BAIXAR GUIA GRATUITO AGORA
-                            </button>
-                        </form>
-                        
-                        <p class="text-xs text-gray-500 mt-4">
-                            🔒 Seus dados estão seguros. Não fazemos spam.
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -489,8 +415,8 @@
                         <p class="text-gray-600 mb-4 text-lg">Na Simplifica Software, acreditamos que tecnologia deve facilitar, não complicar. Por isso, escolhemos TypeScript como nossa linguagem principal.</p>
                         <p class="text-gray-600 mb-6 text-lg">Com anos de experiência em Node.js e Tailwind CSS, entregamos soluções robustas, rápidas e bonitas que seus usuários vão amar usar.</p>
                         <div class="flex gap-4">
-                            <a href="https://wa.me/5586999502444?text=Olá! Gostaria de conversar sobre desenvolvimento de software." target="_blank" onclick="trackWhatsApp()" class="bg-[#25D366] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#22c55e] transition-all duration-300">
-                                💬 Vamos Conversar
+                            <a href="#contato" class="bg-[#2cc6c5] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#27b3b2] transition-all duration-300">
+                                📧 Fale Conosco
                             </a>
                             <a href="#cases" class="border-2 border-[#2cc6c5] text-[#2cc6c5] font-bold px-6 py-3 rounded-lg hover:bg-[#2cc6c5] hover:text-white transition-all duration-300">
                                 Ver Portfólio
@@ -507,15 +433,6 @@
                 <div class="text-center">
                     <h2 class="text-3xl md:text-4xl font-bold">Vamos construir algo incrível juntos?</h2>
                     <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Conte-nos sobre seu projeto e receba um orçamento personalizado em até 24 horas.</p>
-                    
-                    <!-- WhatsApp CTA destacado -->
-                    <div class="bg-[#25D366] rounded-lg p-6 max-w-md mx-auto my-8">
-                        <h3 class="text-xl font-bold mb-2">💬 Prefere WhatsApp?</h3>
-                        <p class="text-sm mb-4">Resposta mais rápida e conversa direta!</p>
-                        <a href="https://wa.me/5586999502444?text=Olá! Gostaria de falar sobre desenvolvimento de software personalizado." target="_blank" onclick="trackWhatsApp()" class="bg-white text-[#25D366] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 inline-block">
-                            Chamar no WhatsApp
-                        </a>
-                    </div>
                 </div>
                 <div class="max-w-xl mx-auto mt-12 bg-white text-gray-800 rounded-xl shadow-2xl p-8">
                     <form action="https://formspree.io/f/xeozejpp" method="POST" onsubmit="trackFormSubmit()">
@@ -539,24 +456,24 @@
                             <label for="service" class="block mb-2 font-medium">Tipo de Serviço</label>
                             <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" required>
                                 <option value="">Selecione o serviço desejado</option>
-                                <option value="Sistema Web Personalizado">🖥️ Sistema Web Personalizado (ERP, CRM, Dashboard)</option>
-                                <option value="App Mobile">📱 App Mobile & PWA</option>
-                                <option value="Consultoria Técnica">💼 Consultoria & Modernização</option>
-                                <option value="Migração TypeScript">🔄 Migração para TypeScript</option>
-                                <option value="Integração de Sistemas">🔗 Integração de Sistemas</option>
-                                <option value="Outro">❓ Outro (especificar na descrição)</option>
+                                <option value="Sistema Web">🖥️ Sistema Web (ERP, CRM, Dashboard)</option>
+                                <option value="App Mobile">📱 Aplicativo Mobile</option>
+                                <option value="Site Institucional">🌐 Site Institucional</option>
+                                <option value="Consultoria">💼 Consultoria Técnica</option>
+                                <option value="Outro">❓ Outro</option>
                             </select>
                         </div>
                         <div class="mb-8">
                             <label for="message" class="block mb-2 font-medium">Descreva seu projeto</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" placeholder="Ex: Preciso de um sistema para gerenciar vendas, com dashboard e app mobile. Orçamento estimado de R$ X..." required></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" placeholder="Descreva seu projeto, necessidades e prazos..." required></textarea>
                         </div>
                         <input type="hidden" name="_subject" value="Novo orçamento - Simplifica Software">
                         <button type="submit" class="w-full bg-[#2cc6c5] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             📧 Enviar Projeto e Receber Orçamento
                         </button>
                         <p class="text-xs text-gray-500 mt-4 text-center">
-                            🔒 Seus dados estão seguros. Resposta garantida em 24h.
+                            🔒 Seus dados estão seguros. Resposta garantida em 24h.<br>
+                            💬 Ou chame no WhatsApp: (86) 9 9950-2444
                         </p>
                     </form>
                 </div>
@@ -570,10 +487,9 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-6 md:mb-0">
                      <a href="#">
-                        <img src="./img/Logo Simplifica Software (1).png" alt="Logo Simplifica Software" class="h-12">
+                        <img src="./img/2.png" alt="Logo Simplifica Software" class="h-12">
                     </a>
-                    <p class="text-gray-400 mt-2">TypeScript • Node.js • Tailwind</p>
-                    <p class="text-gray-400 text-sm mt-1">📞 +55 86 99950-2444</p>
+                    
                 </div>
                 <div class="flex space-x-6">
                     <a href="https://linkedin.com/company/simplifica-software" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
