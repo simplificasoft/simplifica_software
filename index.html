@@ -29,6 +29,22 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B35',
+                        'secondary-orange': '#FF8C42',
+                        'accent-orange': '#FFA726',
+                        'light-orange': '#FFE0B2',
+                        'dark-orange': '#E65100',
+                        'warm-orange': '#FF7043'
+                    }
+                }
+            }
+        }
+    </script>
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -123,16 +139,17 @@
                 <img src="./img/2.png" alt="Logo Simplifica Software" class="h-12">
             </a>
             
-            <!-- Desktop Navigation -->
+                        <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#servicos" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Serviços</a>
-                <a href="#tecnologias" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Tecnologias</a>
-                <a href="#cases" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Cases</a>
-                <a href="#sobre" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Sobre</a>
-                <a href="#contato" class="text-gray-600 hover:text-[#2cc6c5] transition-colors duration-300">Contato</a>
+                <a href="#servicos" class="text-gray-600 hover:text-primary-orange transition-colors duration-300">Serviços</a>
+                <a href="#tecnologias" class="text-gray-600 hover:text-primary-orange transition-colors duration-300">Tecnologias</a>
+                <a href="#cases" class="text-gray-600 hover:text-primary-orange transition-colors duration-300">Cases</a>
+                <a href="#projetos" class="text-gray-600 hover:text-primary-orange transition-colors duration-300">Projetos</a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary-orange transition-colors duration-300">Sobre</a>
+                <a href="#contato" class="text-gray-600 hover:text-primary-orange transition-colors duration-300">Contato</a>
             </nav>
             
-                        <!-- CTA Button -->
+            <!-- CTA Button -->
             <a href="https://wa.me/5586999502444?text=Olá! Gostaria de solicitar um orçamento para desenvolvimento de software." target="_blank" onclick="trackCTAClick('header_whatsapp')" class="hidden md:inline-block bg-[#25D366] text-white font-semibold px-5 py-2 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-md hover:shadow-lg">
                 💬 WhatsApp
             </a>
@@ -147,13 +164,14 @@
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white">
-            <a href="#servicos" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Serviços</a>
-            <a href="#tecnologias" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Tecnologias</a>
-            <a href="#cases" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Cases</a>
-            <a href="#sobre" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Sobre</a>
-            <a href="#contato" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-[#2cc6c5]/10">Contato</a>
+            <a href="#servicos" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-primary-orange/10">Serviços</a>
+            <a href="#tecnologias" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-primary-orange/10">Tecnologias</a>
+            <a href="#cases" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-primary-orange/10">Cases</a>
+            <a href="#projetos" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-primary-orange/10">Projetos</a>
+            <a href="#sobre" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-primary-orange/10">Sobre</a>
+            <a href="#contato" class="block text-center py-3 px-4 text-sm text-gray-600 hover:bg-primary-orange/10">Contato</a>
             <div class="p-4">
-                <a href="#contato" class="w-full block text-center bg-[#2cc6c5] text-white font-semibold px-5 py-3 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-md">
+                <a href="#contato" class="w-full block text-center bg-primary-orange text-white font-semibold px-5 py-3 rounded-lg hover:bg-secondary-orange transition-all duration-300 shadow-md">
                     📞 Contato
                 </a>
             </div>
@@ -165,23 +183,23 @@
         <!-- Hero Section -->
         <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div class="inline-flex items-center bg-light-orange text-dark-orange px-4 py-2 rounded-full text-sm font-medium mb-6">
                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                     </svg>
                     Especialistas em TypeScript + Node.js + Tailwind
                 </div>
                 
-                <h1 class="text-4xl md:text-6xl font-extrabold text-[#191970] leading-tight mb-6">
-                    Software personalizado que <span class="text-[#2cc6c5]">acelera seu negócio</span> em semanas, não meses
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Software personalizado que <span class="text-primary-orange">acelera seu negócio</span> em semanas, não meses
                 </h1>
                 <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-8">
                     <strong>TypeScript + Node.js + Tailwind:</strong> A stack moderna para criar sistemas web, apps mobile e automações que geram resultados reais.
                 </p>
                 
-                <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl mx-auto mb-8">
-                    <p class="text-amber-800 font-medium">
-                        ⚡ <strong>Desenvolvimento rápido</strong> | 💰 <strong>Preços justos</strong> | 🛡️ <strong>Suporte incluso</strong>
+                <div class="bg-gradient-to-r from-light-orange to-orange-100 border border-accent-orange/30 rounded-xl p-6 max-w-2xl mx-auto mb-8">
+                    <p class="text-dark-orange font-semibold text-lg">
+                        ⚡ <strong>Desenvolvimento ágil</strong> | 💰 <strong>Preços transparentes</strong> | 🛡️ <strong>3 meses de suporte</strong>
                     </p>
                 </div>
                 
@@ -189,7 +207,7 @@
                     <a href="https://wa.me/5586999502444?text=Olá! Gostaria de solicitar um orçamento para desenvolvimento de software personalizado." target="_blank" onclick="trackCTAClick('hero_whatsapp')" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#22c55e] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         💬 Chamar no WhatsApp
                     </a>
-                    <a href="#contato" onclick="trackCTAClick('hero_secondary')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300">
+                    <a href="#contato" onclick="trackCTAClick('hero_secondary')" class="bg-primary-orange text-white font-bold px-8 py-4 rounded-lg hover:bg-secondary-orange transition-all duration-300 shadow-lg hover:shadow-xl">
                         📧 Enviar Mensagem
                     </a>
                 </div>
@@ -218,35 +236,35 @@
         </section>
 
         <!-- Services Section -->
-        <section id="servicos" class="py-20 fade-in-section">
+        <section id="servicos" class="py-20 fade-in-section bg-gradient-to-br from-orange-50 to-light-orange/30">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#191970]">Soluções que Geram Impacto Real</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Soluções que Geram Impacto Real</h2>
                     <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Mais do que código, entregamos crescimento, eficiência e inovação para sua empresa.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service Card 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-                        <div class="bg-[#2cc6c5]/20 text-[#2cc6c5] rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 hover:border-primary-orange/30">
+                        <div class="bg-gradient-to-br from-primary-orange/20 to-secondary-orange/20 text-primary-orange rounded-full h-16 w-16 flex items-center justify-center mb-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#191970] mb-3">Sistemas Web Personalizados</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Sistemas Web Personalizados</h3>
                         <p class="text-gray-600">ERPs, CRMs, dashboards e automações com TypeScript + Node.js. Integração completa com seus processos existentes.</p>
                     </div>
                     <!-- Service Card 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-                        <div class="bg-[#2cc6c5]/20 text-[#2cc6c5] rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 hover:border-primary-orange/30">
+                        <div class="bg-gradient-to-br from-secondary-orange/20 to-accent-orange/20 text-secondary-orange rounded-full h-16 w-16 flex items-center justify-center mb-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#191970] mb-3">Apps Mobile & PWAs</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Apps Mobile & PWAs</h3>
                         <p class="text-gray-600">Aplicativos híbridos que funcionam em iOS e Android. Performance nativa com tecnologias web modernas.</p>
                     </div>
                     <!-- Service Card 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-                        <div class="bg-[#2cc6c5]/20 text-[#2cc6c5] rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 hover:border-primary-orange/30">
+                        <div class="bg-gradient-to-br from-accent-orange/20 to-warm-orange/20 text-accent-orange rounded-full h-16 w-16 flex items-center justify-center mb-6">
                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20V16"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#191970] mb-3">Consultoria & Modernização</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Consultoria & Modernização</h3>
                         <p class="text-gray-600">Migração de sistemas legados, otimização de performance e implementação de boas práticas de desenvolvimento.</p>
                     </div>
                 </div>
@@ -257,7 +275,7 @@
         <section id="tecnologias" class="py-20 bg-white fade-in-section">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#191970]">Stack Moderna e Comprovada</h2>
+                                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Stack Moderna e Comprovada</h2>
                     <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Utilizamos as tecnologias que grandes empresas como Netflix, Airbnb e Uber confiam para construir soluções escaláveis.</p>
                 </div>
                 <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-x-8 gap-y-6 text-5xl text-gray-500">
@@ -299,22 +317,144 @@
             </div>
         </section>
 
+        <!-- Projeto em Destaque Section -->
+        <section id="projetos" class="py-20 fade-in-section bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projeto em Destaque</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Conheça o FlowPro Simplifica, nossa solução para gestão de fluxos empresariais</p>
+                </div>
+                
+                <!-- FlowPro Project Showcase -->
+                <div class="max-w-5xl mx-auto">
+                    <div class="bg-gradient-to-br from-primary-orange/5 to-secondary-orange/5 rounded-2xl p-8 md:p-12 border border-primary-orange/20">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <!-- Content -->
+                            <div>
+                                <div class="inline-flex items-center bg-primary-orange/10 text-primary-orange px-4 py-2 rounded-full text-sm font-medium mb-6">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Em Produção
+                                </div>
+                                
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">FlowPro Simplifica</h3>
+                                <p class="text-lg text-gray-600 mb-6">
+                                    Sistema completo de gestão de fluxos empresariais desenvolvido com TypeScript, Node.js e React. 
+                                    Automatiza processos, melhora produtividade e oferece insights em tempo real.
+                                </p>
+                                
+                                <!-- Features -->
+                                <ul class="space-y-3 mb-8">
+                                    <li class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-primary-orange mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <strong>Dashboard intuitivo</strong> com métricas em tempo real
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-primary-orange mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <strong>Automação de fluxos</strong> para reduzir trabalho manual
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-primary-orange mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <strong>Integração completa</strong> com sistemas existentes
+                                    </li>
+                                </ul>
+                                
+                                <!-- Tech Stack -->
+                                <div class="mb-8">
+                                    <h4 class="text-sm font-semibold text-gray-900 mb-3">TECNOLOGIAS UTILIZADAS</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-primary-orange/10 text-primary-orange text-sm font-medium rounded-full">TypeScript</span>
+                                        <span class="px-3 py-1 bg-secondary-orange/10 text-secondary-orange text-sm font-medium rounded-full">Node.js</span>
+                                        <span class="px-3 py-1 bg-accent-orange/10 text-accent-orange text-sm font-medium rounded-full">React</span>
+                                        <span class="px-3 py-1 bg-warm-orange/10 text-warm-orange text-sm font-medium rounded-full">PostgreSQL</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- CTA -->
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a href="https://flowprosimplica.netlify.app" target="_blank" class="bg-primary-orange text-white font-bold px-6 py-3 rounded-lg hover:bg-secondary-orange transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
+                                        🚀 Ver Projeto Live
+                                    </a>
+                                    <a href="#contato" class="border-2 border-primary-orange text-primary-orange font-bold px-6 py-3 rounded-lg hover:bg-primary-orange hover:text-white transition-all duration-300 flex items-center justify-center">
+                                        💬 Quero um Similar
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Visual -->
+                            <div class="relative">
+                                <!-- Netlify Badge -->
+                                <div class="mb-6 text-center">
+                                    <a href="https://app.netlify.com/projects/flowprosimplica/deploys" target="_blank" class="inline-block">
+                                        <img src="https://api.netlify.com/api/v1/badges/047a9fbc-9080-437b-b521-ff706f8cf33d/deploy-status" alt="Netlify Status" class="h-6">
+                                    </a>
+                                    <p class="text-sm text-gray-500 mt-2">Status de Deploy em Tempo Real</p>
+                                </div>
+                                
+                                <!-- Mockup -->
+                                <div class="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-2xl">
+                                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                        <!-- Browser Header -->
+                                        <div class="bg-gray-200 px-4 py-3 flex items-center">
+                                            <div class="flex space-x-2">
+                                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                            </div>
+                                            <div class="ml-4 bg-white rounded px-3 py-1 text-xs text-gray-600 flex-1">
+                                                flowprosimplica.netlify.app
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Mockup Content -->
+                                        <div class="p-6 bg-gradient-to-br from-primary-orange/10 to-secondary-orange/5">
+                                            <div class="flex items-center justify-between mb-4">
+                                                <div class="h-8 bg-primary-orange/20 rounded w-32"></div>
+                                                <div class="h-8 bg-secondary-orange/20 rounded w-20"></div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-4 mb-4">
+                                                <div class="h-16 bg-accent-orange/20 rounded"></div>
+                                                <div class="h-16 bg-warm-orange/20 rounded"></div>
+                                                <div class="h-16 bg-primary-orange/20 rounded"></div>
+                                            </div>
+                                            <div class="space-y-3">
+                                                <div class="h-4 bg-gray-300 rounded w-full"></div>
+                                                <div class="h-4 bg-gray-300 rounded w-4/5"></div>
+                                                <div class="h-4 bg-gray-300 rounded w-3/5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Cases de Sucesso Section -->
         <section id="cases" class="py-20 fade-in-section bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#191970] mb-4">Projetos que Transformaram Negócios</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projetos que Transformaram Negócios</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Casos reais de empresas que automatizaram processos e aceleraram crescimento</p>
                 </div>
                 
                 <!-- Projects Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     <!-- Project 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-[#2cc6c5] text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-orange-100 hover:border-primary-orange/30 transition-all duration-300">
+                        <div class="bg-primary-orange text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
                             Sistema ERP
                         </div>
-                        <h3 class="text-xl font-bold text-[#191970] mb-3">Automação Comercial</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Automação Comercial</h3>
                         <p class="text-gray-600 mb-4">Sistema completo de gestão que reduziu tempo de processamento de pedidos em 80% para empresa de distribuição.</p>
                         <div class="text-sm text-gray-500">
                             <strong>Stack:</strong> TypeScript, Node.js, PostgreSQL
@@ -322,11 +462,11 @@
                     </div>
                     
                     <!-- Project 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-[#2cc6c5] text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-orange-100 hover:border-secondary-orange/30 transition-all duration-300">
+                        <div class="bg-secondary-orange text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
                             App Mobile
                         </div>
-                        <h3 class="text-xl font-bold text-[#191970] mb-3">Marketplace B2B</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Marketplace B2B</h3>
                         <p class="text-gray-600 mb-4">Aplicativo que conecta fornecedores e compradores, processando R$ 2M+ em transações mensais.</p>
                         <div class="text-sm text-gray-500">
                             <strong>Stack:</strong> React Native, Node.js, AWS
@@ -334,11 +474,11 @@
                     </div>
                     
                     <!-- Project 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-[#2cc6c5] text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-orange-100 hover:border-accent-orange/30 transition-all duration-300">
+                        <div class="bg-accent-orange text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">
                             Dashboard Analytics
                         </div>
-                        <h3 class="text-xl font-bold text-[#191970] mb-3">BI em Tempo Real</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">BI em Tempo Real</h3>
                         <p class="text-gray-600 mb-4">Dashboard que centraliza dados de múltiplas fontes, permitindo decisões baseadas em dados atualizados.</p>
                         <div class="text-sm text-gray-500">
                             <strong>Stack:</strong> React, TypeScript, Tailwind
@@ -349,26 +489,26 @@
                 <!-- Stats Row -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">2+ anos</div>
+                        <div class="text-3xl font-bold text-primary-orange mb-2">2+ anos</div>
                         <div class="text-gray-600">Experiência com TypeScript</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">15+</div>
+                        <div class="text-3xl font-bold text-secondary-orange mb-2">15+</div>
                         <div class="text-gray-600">Projetos entregues</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">95%</div>
+                        <div class="text-3xl font-bold text-accent-orange mb-2">95%</div>
                         <div class="text-gray-600">Projetos no prazo</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#2cc6c5] mb-2">3 meses</div>
+                        <div class="text-3xl font-bold text-warm-orange mb-2">3 meses</div>
                         <div class="text-gray-600">Suporte incluído</div>
                     </div>
                 </div>
                 
                 <!-- CTA dentro da seção -->
                 <div class="text-center">
-                    <a href="#contato" onclick="trackCTAClick('cases_contact')" class="bg-[#2cc6c5] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <a href="#contato" onclick="trackCTAClick('cases_contact')" class="bg-primary-orange text-white font-bold px-8 py-4 rounded-lg hover:bg-secondary-orange transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         💼 Solicitar Orçamento
                     </a>
                 </div>
@@ -376,11 +516,11 @@
         </section>
 
         <!-- About Us Section -->
-        <section id="sobre" class="py-20 fade-in-section">
+        <section id="sobre" class="py-20 fade-in-section bg-gradient-to-br from-orange-50 to-light-orange/20">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <div class="bg-gradient-to-br from-[#2cc6c5] to-[#191970] rounded-xl p-8 text-white">
+                        <div class="bg-gradient-to-br from-primary-orange to-dark-orange rounded-xl p-8 text-white shadow-2xl">
                             <h3 class="text-2xl font-bold mb-4">Por que TypeScript + Node.js?</h3>
                             <ul class="space-y-3">
                                 <li class="flex items-center">
@@ -411,14 +551,14 @@
                         </div>
                     </div>
                     <div class="md:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold text-[#191970] mb-6">Especialistas em Tecnologias Modernas</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Especialistas em Tecnologias Modernas</h2>
                         <p class="text-gray-600 mb-4 text-lg">Na Simplifica Software, acreditamos que tecnologia deve facilitar, não complicar. Por isso, escolhemos TypeScript como nossa linguagem principal.</p>
                         <p class="text-gray-600 mb-6 text-lg">Com anos de experiência em Node.js e Tailwind CSS, entregamos soluções robustas, rápidas e bonitas que seus usuários vão amar usar.</p>
                         <div class="flex gap-4">
-                            <a href="#contato" class="bg-[#2cc6c5] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#27b3b2] transition-all duration-300">
+                            <a href="#contato" class="bg-primary-orange text-white font-bold px-6 py-3 rounded-lg hover:bg-secondary-orange transition-all duration-300 shadow-lg hover:shadow-xl">
                                 📧 Fale Conosco
                             </a>
-                            <a href="#cases" class="border-2 border-[#2cc6c5] text-[#2cc6c5] font-bold px-6 py-3 rounded-lg hover:bg-[#2cc6c5] hover:text-white transition-all duration-300">
+                            <a href="#cases" class="border-2 border-primary-orange text-primary-orange font-bold px-6 py-3 rounded-lg hover:bg-primary-orange hover:text-white transition-all duration-300">
                                 Ver Portfólio
                             </a>
                         </div>
@@ -427,8 +567,74 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Perguntas Frequentes</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Esclarecemos as principais dúvidas sobre nossos serviços</p>
+                </div>
+                
+                <div class="max-w-3xl mx-auto">
+                    <div class="space-y-6">
+                        <!-- FAQ Item 1 -->
+                        <div class="border border-orange-100 rounded-lg overflow-hidden">
+                            <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-light-orange/30 to-orange-50 hover:from-light-orange/50 hover:to-orange-100 transition-all duration-300 flex items-center justify-between focus:outline-none">
+                                <span class="text-lg font-semibold text-gray-900">Quanto tempo leva para desenvolver um projeto?</span>
+                                <svg class="w-5 h-5 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="px-6 py-4 bg-white border-t border-orange-100">
+                                <p class="text-gray-600">Projetos simples levam 2-4 semanas, sistemas médios 1-2 meses, e soluções complexas 2-4 meses. Definimos prazos realistas após análise detalhada.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="border border-orange-100 rounded-lg overflow-hidden">
+                            <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-light-orange/30 to-orange-50 hover:from-light-orange/50 hover:to-orange-100 transition-all duration-300 flex items-center justify-between focus:outline-none">
+                                <span class="text-lg font-semibold text-gray-900">Como funciona o suporte pós-entrega?</span>
+                                <svg class="w-5 h-5 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="px-6 py-4 bg-white border-t border-orange-100">
+                                <p class="text-gray-600">Oferecemos 3 meses de suporte gratuito incluindo correções de bugs, atualizações menores e suporte técnico. Suporte estendido disponível.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="border border-orange-100 rounded-lg overflow-hidden">
+                            <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-light-orange/30 to-orange-50 hover:from-light-orange/50 hover:to-orange-100 transition-all duration-300 flex items-center justify-between focus:outline-none">
+                                <span class="text-lg font-semibold text-gray-900">Vocês trabalham com quais tecnologias?</span>
+                                <svg class="w-5 h-5 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="px-6 py-4 bg-white border-t border-orange-100">
+                                <p class="text-gray-600">Especializamos em TypeScript, Node.js, React, Next.js, Tailwind CSS, PostgreSQL, Docker e AWS. Stack moderna e robusta.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="border border-orange-100 rounded-lg overflow-hidden">
+                            <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-light-orange/30 to-orange-50 hover:from-light-orange/50 hover:to-orange-100 transition-all duration-300 flex items-center justify-between focus:outline-none">
+                                <span class="text-lg font-semibold text-gray-900">Como é definido o preço do projeto?</span>
+                                <svg class="w-5 h-5 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="px-6 py-4 bg-white border-t border-orange-100">
+                                <p class="text-gray-600">Preços baseados em escopo, complexidade e prazo. Orçamento transparente sem custos ocultos. Parcelamento disponível para projetos maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section id="contato" class="py-20 bg-[#191970] text-white fade-in-section">
+        <section id="contato" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white fade-in-section">
             <div class="container mx-auto px-6">
                 <div class="text-center">
                     <h2 class="text-3xl md:text-4xl font-bold">Vamos construir algo incrível juntos?</h2>
@@ -438,23 +644,23 @@
                     <form action="https://formspree.io/f/xeozejpp" method="POST" onsubmit="trackFormSubmit()">
                         <div class="mb-5">
                             <label for="name" class="block mb-2 font-medium">Nome Completo</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" required>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-gray-50" required>
                         </div>
                         <div class="mb-5">
                             <label for="email" class="block mb-2 font-medium">E-mail</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" required>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-gray-50" required>
                         </div>
                         <div class="mb-5">
                             <label for="company" class="block mb-2 font-medium">Empresa (opcional)</label>
-                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]">
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-gray-50">
                         </div>
                         <div class="mb-5">
                             <label for="phone" class="block mb-2 font-medium">Telefone/WhatsApp (opcional)</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]">
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-gray-50">
                         </div>
                         <div class="mb-5">
                             <label for="service" class="block mb-2 font-medium">Tipo de Serviço</label>
-                            <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" required>
+                            <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-gray-50" required>
                                 <option value="">Selecione o serviço desejado</option>
                                 <option value="Sistema Web">🖥️ Sistema Web (ERP, CRM, Dashboard)</option>
                                 <option value="App Mobile">📱 Aplicativo Mobile</option>
@@ -465,10 +671,10 @@
                         </div>
                         <div class="mb-8">
                             <label for="message" class="block mb-2 font-medium">Descreva seu projeto</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2cc6c5]" placeholder="Descreva seu projeto, necessidades e prazos..." required></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-gray-50" placeholder="Descreva seu projeto, necessidades e prazos..." required></textarea>
                         </div>
                         <input type="hidden" name="_subject" value="Novo orçamento - Simplifica Software">
-                        <button type="submit" class="w-full bg-[#2cc6c5] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#27b3b2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary-orange to-secondary-orange text-white font-bold py-4 px-8 rounded-lg hover:from-secondary-orange hover:to-accent-orange transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             📧 Enviar Projeto e Receber Orçamento
                         </button>
                         <p class="text-xs text-gray-500 mt-4 text-center">
@@ -531,6 +737,28 @@
             });
         });
 
+        // FAQ Accordion functionality
+        document.querySelectorAll('.border.border-orange-100 button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('svg');
+                
+                // Toggle content visibility
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    arrow.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.display = 'none';
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Initially hide all FAQ answers
+        document.querySelectorAll('.border.border-orange-100 > div:last-child').forEach(content => {
+            content.style.display = 'none';
+        });
+
         // Fade-in sections on scroll
         const sections = document.querySelectorAll('.fade-in-section');
         const options = {
@@ -550,6 +778,20 @@
 
         sections.forEach(section => {
             observer.observe(section);
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     </script>
 </body>
